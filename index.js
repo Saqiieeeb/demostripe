@@ -6,7 +6,7 @@ const crypto = require("crypto");
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
-const PORT = 4242;
+const PORT = process.env.PORT || 4242;
 
 const app = express();
 
