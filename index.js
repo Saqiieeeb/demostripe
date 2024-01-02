@@ -82,8 +82,8 @@ app.post("/create-checkout-session", async (req, res) => {
     // ui_mode: "embeded",
     line_items: lineItems,
     mode: "payment",
-    success_url: `https://demostripe.netlify.app/success`,
-    cancel_url: `https://demostripe.netlify.app/cart`,
+    success_url: `${process.env.BASE_URL}/success`,
+    cancel_url: `${process.env.BASE_URL}/cart`,
   });
 
   res.json({ id: session.id });
